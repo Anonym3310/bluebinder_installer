@@ -33,18 +33,24 @@ echo -e "$YELLOW#=============================#"
 echo -e "2/${GREEN}3${YELLOW} Stage is go - download sources"
 echo -e "#=============================#$NOCOL"
 GIT_BLUEBINDER=https://github.com/mer-hybris/bluebinder
-GIT_BLUEBINDER2=https://github.com/OLEG-XEP/bluebinder
+GIT_BLUEBINDER2=https://github.com/Anonym3310/bluebinder
+GIT_BLUEBINDER3=https://github.com/OLEG-XEP/bluebinder
+
 GIT_LIBGBINDER=https://github.com/mer-hybris/libgbinder
-GIT_LIBGBINDER2=https://github.com/OLEG-XEP/libgbinder
+GIT_LIBGBINDER2=https://github.com/Anonym3310/libgbinder
+GIT_LIBGBINDER3=https://github.com/OLEG-XEP/libgbinder
+
 GIT_LIBGLIBUTIL=https://git.sailfishos.org/mer-core/libglibutil
-GIT_LIBGLIBUTIL2=https://github.com/OLEG-XEP/libglibutil
+GIT_LIBGLIBUTIL2=https://github.com/Anonym3310/libglibutil
+GIT_LIBGLIBUTIL3=https://github.com/OLEG-XEP/libglibutil
+
 WORK_DIR=~/build_bluebinder
 
 mkdir -p $WORK_DIR
 cd $WORK_DIR
-git clone $GIT_BLUEBINDER || git clone --depth 1 $GIT_BLUEBINDER2
-git clone $GIT_LIBGBINDER || git clone --depth 1 $GIT_LIBGBINDER2
-git clone $GIT_LIBGLIBUTIL || git clone --depth 1 $GIT_LIBGLIBUTIL2
+git clone $GIT_BLUEBINDER || git clone --depth 1 $GIT_BLUEBINDER2 || git clone --depth 1 $GIT_BLUEBINDER3
+git clone $GIT_LIBGBINDER || git clone --depth 1 $GIT_LIBGBINDER2 || git clone --depth 1 $GIT_LIBGBINDER3
+git clone $GIT_LIBGLIBUTIL || git clone --depth 1 $GIT_LIBGLIBUTIL2 || git clone --depth 1 $GIT_LIBGLIBUTIL3
 sleep 3
 
 
