@@ -71,23 +71,21 @@ cd ..
 cd bluebinder
 make -j$(nproc --all)
 make install -j$(nproc --all)
-successful(){
 cd ~
 rm -rf $WORK_DIR
 
+successful()
+{
 echo -e "$YELLOW#=============================#"
 echo -e "${GREEN}Successful building. Let's enjoy!$NOCOL"
 echo -e "$YELLOW#=============================#$NOCOL"
 }
-unsuccessfull(){
-cd ~
-rm -rf $WORK_DIR
-
+unsuccessfull()
+{
 echo -e "$YELLOW#=============================#"
 echo -e "${GREEN}Unsuccessfull building.$NOCOL" 
 echo -e "${GREEN}Check if all required packages are installed and try again.$NOCOL"
-echo -e "$YELLOW#=============================#$NOCOL"
-    
+echo -e "$YELLOW#=============================#$NOCOL" 
 }
 if [ -f "bluebinder" ]
 then
