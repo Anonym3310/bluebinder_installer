@@ -71,8 +71,6 @@ cd ..
 cd bluebinder
 make -j$(nproc --all)
 make install -j$(nproc --all)
-cd ~
-rm -rf $WORK_DIR
 
 successful()
 {
@@ -93,3 +91,6 @@ successful
 else
 unsuccessfull
 fi
+
+cd ~
+rm -rf $WORK_DIR
